@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class SnehasExamResult {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] marks = new int[5];
+        System.out.println("Enter marks of 5 subjects:");
+        for (int i = 0; i < 5; i++) {
+            marks[i] = sc.nextInt();
+        }
+        for (int i = 0; i < 5; i++) {
+            if (marks[i] < 35) {
+                System.out.println("Result: FAIL");
+                return; // Stop further checking
+            }
+        }
+        int sum = 0;
+        for (int m : marks) {
+            sum += m;
+        }
+
+        double average = sum / 5.0;
+        System.out.println("Average Marks: " + average);
+        if (average >= 90) {
+            System.out.println("Rank: OUTSTANDING");
+        } else if (average >= 75) {
+            System.out.println("Rank: DISTINCTION");
+        } else if (average >= 60) {
+            System.out.println("Rank: FIRST CLASS");
+        } else {
+            System.out.println("Rank: PASS");
+        }
+    }
+}
