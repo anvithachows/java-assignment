@@ -1,0 +1,19 @@
+public class RamsOutingPlan {
+    public static void main(String[] args) {
+        
+        int temperature = 50; 
+
+        if (temperature > 45) {
+            System.out.println("Temperature: " + temperature + "°C");
+            System.out.println("It's extremely hot! Ram should stay home.");
+        } 
+        else if (temperature >= 30 && temperature <= 45) {
+            System.out.println("Temperature: " + temperature + "°C");
+            System.out.println("Ram can go outside but he should carry water.");
+        } 
+        else {
+            System.out.println("Temperature: " + temperature + "°C");
+            System.out.println("Ram can go normally.");
+        }
+    }
+}
