@@ -1,0 +1,18 @@
+No, a final class cannot be inherited.
+
+In Java, when you declare a class as final, it means:
+
+No other class can extend it.
+
+It cannot be subclassed.
+
+It is used to prevent modification of its behavior.
+
+final class A {
+    void show() {
+        System.out.println("Inside A");
+    }
+}
+
+class B extends A {  
+}
