@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class VisaApplication {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Vikram's age: ");
+        int age = sc.nextInt();
+        System.out.print("Does Vikram have a valid passport? (true/false): ");
+        boolean hasPassport = sc.nextBoolean();
+        if (age >= 18) {
+            if (hasPassport) {
+                System.out.println("Visa application accepted.");
+            } else {
+                System.out.println("Application rejected - No valid passport.");
+            }
+        } else {
+            System.out.println("Visa not allowed - Age below 18.");
+        }
+    }
+}
