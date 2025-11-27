@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class ShoppingDiscount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter total amount: ");
+        double amount = sc.nextDouble();
+        System.out.print("Is Priya a member? (true/false): ");
+        boolean isMember = sc.nextBoolean();
+        double discount = 0;
+        if (isMember) {
+            if (amount >= 10000) {
+                discount = amount * 0.30;
+            } else if (amount >= 5000) {
+                discount = amount * 0.20;   
+            }
+        } else {
+            discount = amount * 0.05;    
+        }
+        double finalAmount = amount - discount;
+        System.out.println("Discount Applied: ₹" + discount);
+        System.out.println("Final Amount to Pay: ₹" + finalAmount);
+    }
+}
