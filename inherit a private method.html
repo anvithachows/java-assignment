@@ -1,0 +1,10 @@
+No, you cannot inherit a private method.
+
+A private method in a class is accessible only within the same class.
+Even if another class extends it (i.e., inherits from it), the child class cannot see or use the private method because:
+
+Private methods are not part of the subclass’s accessible members
+
+They are hidden from child classes.
+
+At compile time, the subclass cannot call the parent’s private method.
