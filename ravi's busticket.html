@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class BusTicketPrice {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter distance travelled (in km): ");
+        int distance = sc.nextInt();
+        System.out.print("Is it a weekend? (true/false): ");
+        boolean isWeekend = sc.nextBoolean();
+        int fare;
+        if (distance < 50) {
+            fare = 50;
+        } else if (distance <= 100) {
+            fare = 100;
+        } else {
+            if (isWeekend) {
+                fare = 300;
+            } else {
+                fare = 200;
+            }
+        }
+        System.out.println("Bus fare for Ravi: ₹" + fare);
+    }
+}
