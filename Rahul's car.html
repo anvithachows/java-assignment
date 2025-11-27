@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class RahulsCarService {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter total kilometers run by the car: ");
+        int km = sc.nextInt();
+        if (km > 20000) {
+            System.out.println("The car needs FULL SERVICE.");
+        } 
+        else if (km >= 10000 && km <= 20000) {
+            System.out.println("The car needs SEMI-SERVICE.");
+        } 
+        else {
+            System.out.println("Only GENERAL CHECKUP is needed.");
+        }
+    }
+}
